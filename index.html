@@ -62,5 +62,32 @@
     System.import('./index.js').catch(function(err) { console.error(err); })
 </script>
 
+<script src="https://discord.com/assets/embedded_app_sdk.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", async () => {
+      const discordSdk = new DiscordSDK("1336536163313520670"); 
+
+      try {
+          await discordSdk.ready(); // Wait for SDK to initialize
+          console.log("✅ Discord SDK Ready");
+
+          // Authenticate user
+          const { user } = await discordSdk.commands.authenticate();
+          console.log("🎮 Logged in as:", user);
+
+          // Update activity presence
+          await discordSdk.commands.updateActivity({
+              details: "Playing Cocos Creator Game!",
+              state: "Scoring High",
+              instance: true,
+          });
+
+      } catch (error) {
+          console.error("❌ Discord SDK Error:", error);
+      }
+  });
+</script>
+
+
 </body>
 </html>
