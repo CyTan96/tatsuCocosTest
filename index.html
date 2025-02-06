@@ -30,6 +30,8 @@
   <!--fix fireball/issues/3568 -->
   <!--<meta name="browsermode" content="application">-->
   <meta name="x5-page-mode" content="app">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://discord.com;">
+
 
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
@@ -56,7 +58,7 @@
 <script src="src/system.bundle.js" charset="utf-8"> </script>
 
 <!-- Import map -->
-<!-- <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script> -->
+<script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
 
 <script>
     System.import('./index.js').catch(function(err) { console.error(err); })
