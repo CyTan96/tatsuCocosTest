@@ -2,7 +2,7 @@
   for = "/*"
   [headers.values]
     Content-Security-Policy = """
-    default-src 'self' https://discord.com;
+    default-src 'self' https://discord.com https://1336536163313520670.discordsays.com;
     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://discord.com https://1336536163313520670.discordsays.com;
     connect-src 'self' https://discord.com https://1336536163313520670.discordsays.com wss://*;
     frame-ancestors 'self' https://discord.com;
